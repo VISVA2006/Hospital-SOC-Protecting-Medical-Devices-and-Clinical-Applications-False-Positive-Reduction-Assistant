@@ -1,0 +1,44 @@
+[
+    {
+        "model_name": "Logistic Regression",
+        "accuracy": 0.9428,
+        "precision": 0.8013,
+        "recall": 1.0,
+        "f1_score": 0.8897,
+        "false_negative_rate": 0.0,
+        "missed_incidents": 0,
+        "total_incidents": 246,
+        "true_positives": 246,
+        "false_positives": 61,
+        "true_negatives": 759,
+        "false_negatives": 0
+    },
+    {
+        "model_name": "Decision Tree",
+        "accuracy": 0.9409,
+        "precision": 0.8211,
+        "recall": 0.9512,
+        "f1_score": 0.8814,
+        "false_negative_rate": 0.0488,
+        "missed_incidents": 12,
+        "total_incidents": 246,
+        "true_positives": 234,
+        "false_positives": 51,
+        "true_negatives": 769,
+        "false_negatives": 12
+    },
+    {
+        "model_name": "Random Forest",
+        "accuracy": 0.9447,
+        "precision": 0.8148,
+        "recall": 0.9837,
+        "f1_score": 0.8913,
+        "false_negative_rate": 0.0163,
+        "missed_incidents": 4,
+        "total_incidents": 246,
+        "true_positives": 242,
+        "false_positives": 55,
+        "true_negatives": 765,
+        "false_negatives": 4
+    }
+]

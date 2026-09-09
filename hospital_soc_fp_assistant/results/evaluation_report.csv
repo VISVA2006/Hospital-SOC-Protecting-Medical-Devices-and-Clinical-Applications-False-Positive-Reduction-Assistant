@@ -1,0 +1,11 @@
+Metric,Baseline (Rule-Based),Proposed (ML + Guardrails),Impact / Delta
+Total Alerts,5330,5330,Same Dataset
+Alerts Requiring Review,3565,1996,-1569 alerts
+Alerts Suppressed (FP),1765,3334,+1569 suppressed
+Detected Incidents,1231,1231,Full Detection
+Missed Incidents,0,0,Zero Missed Incidents (SAFE)
+Missed Incident Rate,0.00%,0.00%,Maintained at 0.00%
+Precision (Threat Triage),34.53%,61.67%,+27.14%
+Recall,100.00%,100.00%,100.00% Preserved
+F1 Score,0.5133,0.7629,+0.2496
+Analyst Hours Required,475.33 hrs,266.13 hrs,-209.2 hrs saved (44.01%)

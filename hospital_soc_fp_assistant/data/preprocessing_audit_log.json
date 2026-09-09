@@ -1,0 +1,15 @@
+{
+    "timestamp": "2026-09-09T10:06:41.039710",
+    "input_file": "data/raw_alerts.csv",
+    "output_file": "data/cleaned_alerts.csv",
+    "total_records_processed": 5330,
+    "missing_values_before": 5903,
+    "categorical_imputations": {
+        "patch_status": 159,
+        "antivirus_status": 141,
+        "user_role": 158,
+        "firmware_version": 160
+    },
+    "records_retained": 5330,
+    "records_dropped": 0
+}

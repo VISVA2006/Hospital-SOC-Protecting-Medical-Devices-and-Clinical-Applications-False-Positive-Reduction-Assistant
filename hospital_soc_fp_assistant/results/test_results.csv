@@ -1,0 +1,8 @@
+test_id,test_name,category,input_scenario,expected_result,observed_result,status
+TEST-01,Normal False Positive,Standard Operations,Known scanner IP 10.0.10.50 running scheduled scan during maintenance window,LIKELY_FALSE_POSITIVE,LIKELY_FALSE_POSITIVE (Confidence: 91%),PASSED
+TEST-02,Real Suspicious Alert,Threat Detection,Spike of 35 failed SSH root logins from external IP against PACS server,INVESTIGATE,INVESTIGATE / ESCALATE (Threat Prob: 99%),PASSED
+TEST-03,Novel Medical Device Threat,Novelty Defense,Infusion Pump communicating with unseen external C2 IP over unusual port 9001,INVESTIGATE (Never suppress),INVESTIGATE (Anomaly Score: 0.82; Safety override active),PASSED
+TEST-04,Duplicate Alert Flood,Event Integrity,Same event EVT-UNIQUE-9999 submitted 10 times consecutively,1 logical event emitted; 9 duplicates filtered,1 logical event emitted; 9 duplicates filtered,PASSED
+TEST-05,Out-of-Order Stream Arrival,Event Integrity,Events generated at 10:01..10:05 arriving in scrambled order 10:05;10:01;10:04;10:02;10:03,Chronological reconstruction (10:01 to 10:05) with 0 lost records,Chronological sequence strictly restored; was_out_of_order=True,PASSED
+TEST-06,Delayed Critical Event,Event Integrity,Ventilator beacon event generated at 10:01 but delivered at 10:10 (9 min delay),Event processed with 540s latency flag; no data dropped,Event processed; latency_seconds=540.0; is_delayed=1; severity retained,PASSED
+TEST-07,Model Deception Adversarial Attack,Safety Guardrails,Attackers craft alert mimicking routine low-severity scanner traffic on Critical Ventilator,Novelty/safety layer overrides ML and blocks suppression,INVESTIGATE / REVIEW (Clinical safety rule triggered; auto-suppress blocked),PASSED
