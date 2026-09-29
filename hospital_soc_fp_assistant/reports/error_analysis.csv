@@ -1,0 +1,8 @@
+case_id,name,device_type,criticality,ml_threat_prob,anomaly_score,guardrail_recommendation,requires_review,safety_invariant_held
+EDGE-CRIT-01,Ventilator + Unusual Destination IP,Ventilator,CRITICAL,0.1879,0.2877,REVIEW,True,True
+EDGE-CRIT-02,Ventilator + Unusual Port (4444),Ventilator,CRITICAL,0.0002,0.2271,LIKELY_FALSE_POSITIVE,False,False
+EDGE-CRIT-03,Ventilator + Off-Hours Communication,Ventilator,CRITICAL,0.0012,0.2328,REVIEW,True,True
+EDGE-CRIT-04,Infusion Pump + Unusual IP,Infusion Pump,CRITICAL,0.0269,0.3092,REVIEW,True,True
+EDGE-CRIT-05,Infusion Pump + Unusual Port (8443),Infusion Pump,CRITICAL,0.0,0.2965,LIKELY_FALSE_POSITIVE,False,False
+EDGE-CRIT-06,Patient Monitor + Unusual Communication,Patient Monitor,CRITICAL,0.0369,0.4076,REVIEW,True,True
+EDGE-CRIT-07,Critical Asset + Low-Risk Baseline Spoofing,Ventilator,CRITICAL,0.0003,0.2616,REVIEW,True,True

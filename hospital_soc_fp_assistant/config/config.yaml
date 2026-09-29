@@ -1,0 +1,64 @@
+# Central Configuration File for Hospital SOC False-Positive Reduction Assistant
+# Milestone: 100% Production-Grade Defensive Prototype
+
+system:
+  project_name: "Hospital SOC False-Positive Reduction Assistant"
+  version: "2.0.0"
+  environment: "local"
+  random_seed: 42
+
+paths:
+  raw_alerts: "data/raw_alerts.csv"
+  cleaned_alerts: "data/cleaned_alerts.csv"
+  confirmed_incidents: "data/confirmed_incidents.csv"
+  analyst_feedback: "data/analyst_feedback.csv"
+  model_registry: "models/model_registry.json"
+  champion_model: "models/false_positive_model.joblib"
+  anomaly_model: "models/anomaly_model.joblib"
+  reports_dir: "reports"
+  figures_dir: "results/figures"
+
+thresholds:
+  default_threat_threshold: 0.40
+  default_anomaly_threshold: 0.65
+  confidence_boundary_low: 0.20
+  confidence_boundary_high: 0.50
+  delay_threshold_seconds: 180
+
+clinical_safety:
+  critical_device_types:
+    - "Ventilator"
+    - "Infusion Pump"
+    - "Patient Monitor"
+    - "Anesthesia Machine"
+  high_priority_devices:
+    - "CT Scanner"
+    - "MRI Scanner"
+    - "PACS Server"
+  enforce_strict_guardrail: true
+  auto_suppression_allowed_for_critical: false
+
+workload_model:
+  average_triage_minutes: 8.0
+  investigation_minutes: 25.0
+  escalation_minutes: 45.0
+
+feedback_learning:
+  min_feedback_samples: 50
+  historical_replay_ratio: 0.80
+  feedback_sample_ratio: 0.20
+  class_weight: "balanced"
+  promotion_gates:
+    min_threat_recall: 0.95
+    max_missed_incidents: 0
+    max_novelty_degradation: 0.05
+    critical_device_recall_min: 1.00
+
+sequence_detection:
+  window_sizes_minutes:
+    - 5
+    - 15
+    - 30
+    - 60
+  high_risk_frequency_threshold: 15
+  auth_failure_sequence_threshold: 5

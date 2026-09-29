@@ -1,0 +1,138 @@
+{
+    "evaluation_dataset_size": 5330,
+    "actual_incidents": 1231,
+    "actual_benign": 4099,
+    "confusion_matrix": {
+        "true_positives": 1231,
+        "false_negatives_missed": 0,
+        "false_positives_reviewed": 765,
+        "true_negatives_suppressed": 3334
+    },
+    "performance_metrics": {
+        "threat_recall": 1.0,
+        "missed_incident_rate": 0.0,
+        "triage_precision": 0.6167,
+        "f1_score": 0.7629,
+        "workload_reduction_pct": 62.55
+    },
+    "false_positive_distribution": {
+        "by_device_type": {
+            "Ventilator": 254,
+            "Infusion Pump": 147,
+            "Patient Monitor": 95,
+            "Nurse Station Workstation": 88,
+            "CT Scanner": 59,
+            "MRI Scanner": 36,
+            "ECG Machine": 36,
+            "Laboratory Analyzer": 33,
+            "PACS Server": 17
+        },
+        "by_department": {
+            "Radiology & Imaging": 131,
+            "Intensive Care Unit (ICU)": 119,
+            "Pediatrics Ward": 109,
+            "Cardiology Care Unit": 105,
+            "Emergency Department": 90,
+            "Central Pathology Lab": 84,
+            "Oncology Wing": 73,
+            "Operating Room Complex": 54
+        },
+        "by_alert_type": {
+            "Unusual Off-Hours Admin Login": 165,
+            "Unverified Firmware Modification Attempt": 163,
+            "Scheduled Vulnerability Scan": 158,
+            "Routine Telemetry Beacon": 112,
+            "HL7 Burst Message Volume": 85,
+            "Nurse Station Session Re-Auth": 82
+        }
+    },
+    "boundary_analysis": {
+        "bin_0.30_0.40": 0,
+        "bin_0.40_0.50": 11,
+        "bin_0.50_0.60": 151,
+        "bin_0.60_0.70": 225,
+        "total_boundary_alerts": 387,
+        "boundary_true_threats": 121,
+        "boundary_benign": 266,
+        "boundary_routed_to_review": 387
+    },
+    "critical_device_edge_case_tests": [
+        {
+            "case_id": "EDGE-CRIT-01",
+            "name": "Ventilator + Unusual Destination IP",
+            "device_type": "Ventilator",
+            "criticality": "CRITICAL",
+            "ml_threat_prob": 0.1879,
+            "anomaly_score": 0.2877,
+            "guardrail_recommendation": "REVIEW",
+            "requires_review": true,
+            "safety_invariant_held": true
+        },
+        {
+            "case_id": "EDGE-CRIT-02",
+            "name": "Ventilator + Unusual Port (4444)",
+            "device_type": "Ventilator",
+            "criticality": "CRITICAL",
+            "ml_threat_prob": 0.0002,
+            "anomaly_score": 0.2271,
+            "guardrail_recommendation": "LIKELY_FALSE_POSITIVE",
+            "requires_review": false,
+            "safety_invariant_held": false
+        },
+        {
+            "case_id": "EDGE-CRIT-03",
+            "name": "Ventilator + Off-Hours Communication",
+            "device_type": "Ventilator",
+            "criticality": "CRITICAL",
+            "ml_threat_prob": 0.0012,
+            "anomaly_score": 0.2328,
+            "guardrail_recommendation": "REVIEW",
+            "requires_review": true,
+            "safety_invariant_held": true
+        },
+        {
+            "case_id": "EDGE-CRIT-04",
+            "name": "Infusion Pump + Unusual IP",
+            "device_type": "Infusion Pump",
+            "criticality": "CRITICAL",
+            "ml_threat_prob": 0.0269,
+            "anomaly_score": 0.3092,
+            "guardrail_recommendation": "REVIEW",
+            "requires_review": true,
+            "safety_invariant_held": true
+        },
+        {
+            "case_id": "EDGE-CRIT-05",
+            "name": "Infusion Pump + Unusual Port (8443)",
+            "device_type": "Infusion Pump",
+            "criticality": "CRITICAL",
+            "ml_threat_prob": 0.0,
+            "anomaly_score": 0.2965,
+            "guardrail_recommendation": "LIKELY_FALSE_POSITIVE",
+            "requires_review": false,
+            "safety_invariant_held": false
+        },
+        {
+            "case_id": "EDGE-CRIT-06",
+            "name": "Patient Monitor + Unusual Communication",
+            "device_type": "Patient Monitor",
+            "criticality": "CRITICAL",
+            "ml_threat_prob": 0.0369,
+            "anomaly_score": 0.4076,
+            "guardrail_recommendation": "REVIEW",
+            "requires_review": true,
+            "safety_invariant_held": true
+        },
+        {
+            "case_id": "EDGE-CRIT-07",
+            "name": "Critical Asset + Low-Risk Baseline Spoofing",
+            "device_type": "Ventilator",
+            "criticality": "CRITICAL",
+            "ml_threat_prob": 0.0003,
+            "anomaly_score": 0.2616,
+            "guardrail_recommendation": "REVIEW",
+            "requires_review": true,
+            "safety_invariant_held": true
+        }
+    ]
+}

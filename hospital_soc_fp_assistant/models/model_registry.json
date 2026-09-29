@@ -1,0 +1,186 @@
+{
+    "active_champion_version": "v1.0",
+    "last_updated": "2026-09-29T15:54:51.672195",
+    "models": [
+        {
+            "model_version": "v1.0",
+            "status": "CHAMPION",
+            "model_path": "models/false_positive_model.joblib",
+            "training_timestamp": "2026-09-09T10:07:56",
+            "dataset_version": "synthetic_5330_v1",
+            "training_samples": 4264,
+            "feedback_samples": 0,
+            "metrics": {
+                "threat_recall": 1.0,
+                "missed_incidents": 0,
+                "triage_precision": 0.8013,
+                "f1_score": 0.8897,
+                "accuracy": 0.9428,
+                "critical_device_recall": 1.0
+            },
+            "notes": "Initial 35% milestone champion model (Balanced Logistic Regression)."
+        },
+        {
+            "model_version": "v2.0",
+            "status": "CANDIDATE",
+            "model_path": "models/candidate_model_v2.0.joblib",
+            "training_timestamp": "2026-09-29T15:15:55.788852",
+            "dataset_version": "replay_retrain_20260929",
+            "training_samples": 600,
+            "feedback_samples": 150,
+            "metrics": {
+                "threat_recall": 1.0,
+                "missed_incidents": 0,
+                "triage_precision": 0.8333,
+                "f1_score": 0.9091,
+                "accuracy": 0.9533,
+                "critical_device_recall": 1.0
+            },
+            "notes": "Replay-retrained candidate with 150 feedback samples."
+        },
+        {
+            "model_version": "v3.0",
+            "status": "CANDIDATE",
+            "model_path": "models/candidate_model_v3.0.joblib",
+            "training_timestamp": "2026-09-29T15:20:59.555574",
+            "dataset_version": "replay_retrain_20260929",
+            "training_samples": 604,
+            "feedback_samples": 151,
+            "metrics": {
+                "threat_recall": 0.9487,
+                "missed_incidents": 2,
+                "triage_precision": 0.8605,
+                "f1_score": 0.9024,
+                "accuracy": 0.947,
+                "critical_device_recall": 0.8667
+            },
+            "notes": "Replay-retrained candidate with 151 feedback samples."
+        },
+        {
+            "model_version": "v4.0",
+            "status": "CANDIDATE",
+            "model_path": "models/candidate_model_v4.0.joblib",
+            "training_timestamp": "2026-09-29T15:26:31.046649",
+            "dataset_version": "replay_retrain_20260929",
+            "training_samples": 604,
+            "feedback_samples": 151,
+            "metrics": {
+                "threat_recall": 0.9487,
+                "missed_incidents": 2,
+                "triage_precision": 0.8605,
+                "f1_score": 0.9024,
+                "accuracy": 0.947,
+                "critical_device_recall": 0.8667
+            },
+            "notes": "Replay-retrained candidate with 151 feedback samples."
+        },
+        {
+            "model_version": "v5.0",
+            "status": "CANDIDATE",
+            "model_path": "models/candidate_model_v5.0.joblib",
+            "training_timestamp": "2026-09-29T15:30:49.209050",
+            "dataset_version": "replay_retrain_20260929",
+            "training_samples": 604,
+            "feedback_samples": 151,
+            "metrics": {
+                "threat_recall": 0.9487,
+                "missed_incidents": 2,
+                "triage_precision": 0.8605,
+                "f1_score": 0.9024,
+                "accuracy": 0.947,
+                "critical_device_recall": 0.8667
+            },
+            "notes": "Replay-retrained candidate with 151 feedback samples."
+        },
+        {
+            "model_version": "v6.0",
+            "status": "CANDIDATE",
+            "model_path": "models/candidate_model_v6.0.joblib",
+            "training_timestamp": "2026-09-29T15:33:33.733765",
+            "dataset_version": "replay_retrain_20260929",
+            "training_samples": 604,
+            "feedback_samples": 151,
+            "metrics": {
+                "threat_recall": 0.9487,
+                "missed_incidents": 2,
+                "triage_precision": 0.8605,
+                "f1_score": 0.9024,
+                "accuracy": 0.947,
+                "critical_device_recall": 0.8667
+            },
+            "notes": "Replay-retrained candidate with 151 feedback samples."
+        },
+        {
+            "model_version": "v7.0",
+            "status": "CANDIDATE",
+            "model_path": "models/candidate_model_v7.0.joblib",
+            "training_timestamp": "2026-09-29T15:34:04.162741",
+            "dataset_version": "replay_retrain_20260929",
+            "training_samples": 604,
+            "feedback_samples": 151,
+            "metrics": {
+                "threat_recall": 0.9487,
+                "missed_incidents": 2,
+                "triage_precision": 0.8605,
+                "f1_score": 0.9024,
+                "accuracy": 0.947,
+                "critical_device_recall": 0.8667
+            },
+            "notes": "Replay-retrained candidate with 151 feedback samples."
+        },
+        {
+            "model_version": "v8.0",
+            "status": "CANDIDATE",
+            "model_path": "models/candidate_model_v8.0.joblib",
+            "training_timestamp": "2026-09-29T15:35:07.215543",
+            "dataset_version": "replay_retrain_20260929",
+            "training_samples": 604,
+            "feedback_samples": 151,
+            "metrics": {
+                "threat_recall": 0.9487,
+                "missed_incidents": 2,
+                "triage_precision": 0.8605,
+                "f1_score": 0.9024,
+                "accuracy": 0.947,
+                "critical_device_recall": 0.8667
+            },
+            "notes": "Replay-retrained candidate with 151 feedback samples."
+        },
+        {
+            "model_version": "v9.0",
+            "status": "CANDIDATE",
+            "model_path": "models/candidate_model_v9.0.joblib",
+            "training_timestamp": "2026-09-29T15:38:40.679291",
+            "dataset_version": "replay_retrain_20260929",
+            "training_samples": 604,
+            "feedback_samples": 151,
+            "metrics": {
+                "threat_recall": 0.9487,
+                "missed_incidents": 2,
+                "triage_precision": 0.8605,
+                "f1_score": 0.9024,
+                "accuracy": 0.947,
+                "critical_device_recall": 0.8667
+            },
+            "notes": "Replay-retrained candidate with 151 feedback samples."
+        },
+        {
+            "model_version": "v10.0",
+            "status": "CANDIDATE",
+            "model_path": "models/candidate_model_v10.0.joblib",
+            "training_timestamp": "2026-09-29T15:54:51.672195",
+            "dataset_version": "replay_retrain_20260929",
+            "training_samples": 604,
+            "feedback_samples": 151,
+            "metrics": {
+                "threat_recall": 0.9487,
+                "missed_incidents": 2,
+                "triage_precision": 0.8605,
+                "f1_score": 0.9024,
+                "accuracy": 0.947,
+                "critical_device_recall": 0.8667
+            },
+            "notes": "Replay-retrained candidate with 151 feedback samples."
+        }
+    ]
+}

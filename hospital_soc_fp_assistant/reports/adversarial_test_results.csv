@@ -1,0 +1,13 @@
+scenario_id,scenario_name,category,expected_action,actual_recommendation,anomaly_score,guardrail_status,passed
+ADV-01,Low-Severity Deception on Ventilator,Deception,REVIEW / INVESTIGATE,REVIEW,0.3656,SAFETY HELD,True
+ADV-02,Medical Telemetry Perturbation,Perturbation,REVIEW / INVESTIGATE,INVESTIGATE,0.4354,SAFETY HELD,True
+ADV-03,Low-and-Slow Attack Sequence,Sequence,INVESTIGATE / REVIEW,REVIEW,0.3323,SEQUENCE RISK: 0.4733,True
+ADV-04,Delayed Suspicious Telemetry (15m Delay),Event Integrity,RETAINED WITH LATENCY TAG,"LATENCY: 900.0s, DELAYED: 1",0.0,STREAM PRESERVED,True
+ADV-05,Out-of-Order Event Stream Delivery,Event Integrity,REORDERED CHRONOLOGICALLY,"ORDER: ['E1', 'E3', 'E5']",0.0,SEQUENCE REPAIRED,True
+ADV-06,Duplicate Alert Storm (20x Flood),Event Integrity,1 LOGICAL EVENT EMITTED,1 EMITTED,0.0,FLOOD SUPPRESSED,True
+ADV-07,Maintenance Window Lateral Deception,Deception,REVIEW / INVESTIGATE,REVIEW,0.362,SAFETY OVERRIDE ACTIVE,True
+ADV-08,Critical Asset External Communication,Novel Destination,REVIEW / ESCALATE,REVIEW,0.3656,AUTO-SUPPRESSION FORBIDDEN,True
+ADV-09,Unknown High Port (9001) on Infusion Pump,Novel Port,REVIEW / INVESTIGATE,INVESTIGATE,0.4287,SAFETY HELD,True
+ADV-10,Distributed Low-Volume Auth Attack,Distributed,REVIEW / INVESTIGATE,ESCALATE,0.5001,SAFETY HELD,True
+ADV-11,Critical Alert with Missing Telemetry,Missing Data,REVIEW / INVESTIGATE,REVIEW,0.3656,SAFE IMPUTATION,True
+ADV-12,Combined Perturbation + Sequence Escalation,Hybrid,INVESTIGATE / ESCALATE,INVESTIGATE,0.5028,COMPOUND THREAT DETECTED,True

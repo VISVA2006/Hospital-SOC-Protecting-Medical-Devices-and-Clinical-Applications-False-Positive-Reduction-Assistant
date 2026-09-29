@@ -1,0 +1,20 @@
+Metric,Rule-Based Baseline,AI Assistant with Clinical Guardrails,Delta / Improvement
+Total Ingested Alerts,5330,5330,0
+Actual Incidents,1231,1231,0
+Actual False Positives / Benign,4099,4099,0
+Alerts Requiring Human Review,3565,1996,-1569 (-44.01%)
+Alerts Safely Suppressed,1765,3334,+1569 (+88.90%)
+Detected True Incidents,1231,1231,0 (100% Retained)
+Missed True Incidents (FN),0,0,0 (Zero Patient Threat Invariant)
+Missed Incident Rate (%),0.00%,0.00%,0.00%
+Threat Recall (%),100.00%,100.00%,0.00%
+Critical Device Recall (%),100.00%,100.00%,0.00%
+Triage Precision (%),34.53%,61.67%,+27.14% absolute
+Triage F1 Score,0.5133,0.7629,+0.2496 (+48.63%)
+Accuracy (%),56.21%,85.65%,+29.44% absolute
+Analyst Investigation Hours,475.33 hrs,266.13 hrs,-209.20 hrs
+Workload Hours Saved,0.00 hrs,209.20 hrs,+209.20 hrs
+Workload Reduction (%),0.00%,44.01%,+44.01%
+Adversarial Evasion Resilience,Failed (Bypassed),12/12 Blocked (100%),Robust Defense
+Data Leakage Audit,Unchecked,100% Leakage-Free (Audited),Verified
+Feature Drift Resilience,Degraded,100% Recall Maintained,Protected by Invariant

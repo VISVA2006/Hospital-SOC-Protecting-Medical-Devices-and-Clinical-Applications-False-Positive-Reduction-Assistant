@@ -1,0 +1,60 @@
+{
+    "analysis_type": "Controlled Synthetic Feature Drift Simulation",
+    "samples_evaluated": 5330,
+    "features_monitored": [
+        {
+            "feature": "failed_login_count",
+            "baseline_mean": 3.037,
+            "drifted_mean": 5.415,
+            "psi": 0.9471,
+            "ks_statistic": 0.4398,
+            "ks_pvalue": 0.0,
+            "drift_severity": "SIGNIFICANT"
+        },
+        {
+            "feature": "latency_seconds",
+            "baseline_mean": 115.097,
+            "drifted_mean": 217.235,
+            "psi": 2.077,
+            "ks_statistic": 0.6856,
+            "ks_pvalue": 0.0,
+            "drift_severity": "SIGNIFICANT"
+        },
+        {
+            "feature": "historical_false_positive_rate",
+            "baseline_mean": 0.802,
+            "drifted_mean": 0.682,
+            "psi": 6.8941,
+            "ks_statistic": 0.5255,
+            "ks_pvalue": 0.0,
+            "drift_severity": "SIGNIFICANT"
+        },
+        {
+            "feature": "event_count",
+            "baseline_mean": 134.372,
+            "drifted_mean": 134.372,
+            "psi": 0.0,
+            "ks_statistic": 0.0,
+            "ks_pvalue": 1.0,
+            "drift_severity": "NEGLIGIBLE"
+        },
+        {
+            "feature": "destination_port",
+            "baseline_mean": 2222.12,
+            "drifted_mean": 2222.12,
+            "psi": 0.0,
+            "ks_statistic": 0.0,
+            "ks_pvalue": 1.0,
+            "drift_severity": "NEGLIGIBLE"
+        }
+    ],
+    "impact_analysis": {
+        "recall_before_drift": 1.0,
+        "recall_after_drift": 1.0,
+        "false_negatives_before": 0,
+        "false_negatives_after": 0,
+        "alerts_reviewed_before": 1996,
+        "alerts_reviewed_after": 2470,
+        "safety_guardrail_protective_override": "Maintained 0 missed threats due to clinical guardrails"
+    }
+}
